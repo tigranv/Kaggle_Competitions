@@ -110,10 +110,10 @@ for dataset in combine:
 
 train_df.head()
 
-## grid = sns.FacetGrid(train_df, col='Pclass', hue='Gender')
-#grid = sns.FacetGrid(train_df, row='Pclass', col='Sex', size=2.2, aspect=1.6)
-#grid.map(plt.hist, 'Age', alpha=.5, bins=20)
-#grid.add_legend()
+grid = sns.FacetGrid(train_df, col='Pclass', hue='Gender')
+grid = sns.FacetGrid(train_df, row='Pclass', col='Sex', size=2.2, aspect=1.6)
+grid.map(plt.hist, 'Age', alpha=.5, bins=20)
+grid.add_legend()
 
 guess_ages = np.zeros((2,3))
 
@@ -137,22 +137,22 @@ for dataset in combine:
 
     dataset['Age'] = dataset['Age'].astype(int)
 
-print(train_df.head())
+#print(train_df.head())
 
-train_df['AgeBand'] = pd.cut(train_df['Age'], 5)
-train_df[['AgeBand', 'Survived']].groupby(['AgeBand'], as_index=False).mean().sort_values(by='AgeBand', ascending=True)
+#train_df['AgeBand'] = pd.cut(train_df['Age'], 5)
+#train_df[['AgeBand', 'Survived']].groupby(['AgeBand'], as_index=False).mean().sort_values(by='AgeBand', ascending=True)
 
 for dataset in combine:    
     dataset.loc[ dataset['Age'] <= 16, 'Age'] = 0
     dataset.loc[(dataset['Age'] > 16) & (dataset['Age'] <= 32), 'Age'] = 1
     dataset.loc[(dataset['Age'] > 32) & (dataset['Age'] <= 48), 'Age'] = 2
     dataset.loc[(dataset['Age'] > 48) & (dataset['Age'] <= 64), 'Age'] = 3
-    dataset.loc[ dataset['Age'] > 64, 'Age']
+    dataset.loc[ dataset['Age'] > 64, 'Age'] = 4
 train_df.head()
 
-train_df = train_df.drop(['AgeBand'], axis=1)
-combine = [train_df, test_df]
-train_df.head()
+#train_df = train_df.drop(['AgeBand'], axis=1)
+#combine = [train_df, test_df]
+#train_df.head()
 
 
 for dataset in combine:
@@ -211,6 +211,9 @@ combine = [train_df, test_df]
     
 train_df.head(10)
 test_df.head(10)
+
+train_df.to_csv('../KaggleCompetitions/Titanic/OriginalData/newTrain.csv', index=False)
+test_df.to_csv('../KaggleCompetitions/Titanic/OriginalData/newTest.csv', index=False)
 
 X_train = train_df.drop("Survived", axis=1)
 Y_train = train_df["Survived"]

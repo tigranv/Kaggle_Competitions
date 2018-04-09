@@ -25,6 +25,9 @@
     <Compile Include="Titanic\TitanicManev.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Titanic\TitanicSelf.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Titanic\" />
