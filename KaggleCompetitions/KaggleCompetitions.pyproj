@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>978ac0c4-9fa4-42e9-9b78-e1effe3c4a58</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Titanic\TitanicManev.py</StartupFile>
+    <StartupFile>Titanic\TitanicSelf.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>KaggleCompetitions</Name>
     <RootNamespace>KaggleCompetitions</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda36-64</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Titanic\" />
+    <Folder Include="C:\Users\Tigran PC\Source\Repos\Kaggle_Competitions\KaggleCompetitions\Titanic\reducedData\" />
     <Folder Include="Titanic\OriginalData\" />
   </ItemGroup>
   <ItemGroup>
@@ -39,8 +41,13 @@
     <Content Include="Titanic\OriginalData\submission1.csv" />
     <Content Include="Titanic\OriginalData\test.csv" />
     <Content Include="Titanic\OriginalData\train.csv" />
+    <Content Include="Titanic\reducedData\test_reduced.csv" />
+    <Content Include="Titanic\reducedData\train_reduced.csv" />
     <Content Include="Titanic\test.csv" />
     <Content Include="Titanic\train.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
