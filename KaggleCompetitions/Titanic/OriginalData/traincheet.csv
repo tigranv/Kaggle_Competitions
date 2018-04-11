@@ -1007,7 +1007,7 @@ PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
 1041,0,2,"Lahtinen, Rev. William",male,30,1,1,250651,26,,S
 1042,1,1,"Earnshaw, Mrs. Boulton (Olive Potter)",female,23,0,1,11767,83.1583,C54,C
 1043,0,3,"Matinoff, Mr. Nicola",male,,0,0,349255,7.8958,,C
-1044,0,3,"Storey, Mr. Thomas",male,60.5,0,0,3701,0,,S
+1044,0,3,"Storey, Mr. Thomas",male,60.5,0,0,3701,,,S
 1046,0,3,"Asplund, Master. Filip Oscar",male,13,4,2,347077,31.3875,,S
 1047,0,3,"Duquemin, Mr. Joseph",male,24,0,0,S.O./P.P. 752,7.55,,S
 1048,1,1,"Bird, Miss. Ellen",female,29,0,0,PC 17483,221.7792,C97,S
